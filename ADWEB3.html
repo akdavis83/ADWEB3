@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ADWEB3</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/281684/unslider.css'>
+<style>
+  html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding-top: 90px;
+}
+
+nav.navbar {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+nav.navbar .nav-brand {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 25px 0px;
+  color: #0b09a8;
+}
+
+.title-section .hero {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  background: url(Lambo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.title-section .hero .hero-title {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: right;
+  padding: 50px;
+}
+.title-section .hero .hero-title div span {
+  display: inline-block;
+  margin: 10px 5px;
+  background: #0b09a8;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .title-section .hero .hero-title div span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .title-section .hero .hero-title div span {
+    font-size: 32px;
+  }
+}
+
+.services-section .services-title {
+  padding: 50px 0px;
+}
+.services-section .services-content .section-help {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+.services-section .services-content .section-help:nth-of-type(1) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.services-section .services-content .section-help:nth-of-type(2) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.services-section .services-content .section-help:nth-of-type(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.services-section .services-content .section-help:last-of-type {
+  padding-bottom: 50px;
+}
+.services-section .services-content .section-help .section-image img {
+  width: 100%;
+}
+.services-section .services-content .section-help .section-content .image-tagline {
+  padding: 20px 0px 0px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #252c41;
+}
+.services-section .services-content .section-help .section-content hr {
+  width: 50px;
+  height: 2px;
+  border: none;
+  border-top: 2px solid #0b09a8;
+}
+.services-section .services-content .section-help .section-content .section-description {
+  text-align: justify;
+}
+
+.testimonial-section {
+  background: #0b09a8;
+  margin-bottom: 25px;
+}
+.testimonial-section .slider-container li {
+  text-align: center;
+  min-height: 300px;
+}
+.testimonial-section .slider-container li .testimonial-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.testimonial-section .slider-container li .testimonial-wrapper .testimonial {
+  font-size: 30px;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .testimonial-section .slider-container li .testimonial-wrapper .testimonial {
+    font-size: 20px;
+  }
+}
+.testimonial-section .slider-container li .testimonial-wrapper hr {
+  width: 50px;
+}
+.testimonial-section .slider-container li .testimonial-wrapper .author {
+  width: 100%;
+  display: block;
+  color: #eee;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  .testimonial-section .slider-container li .testimonial-wrapper .author {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  color: #0b09a8;
+}
+h1.line {
+  background: #fff;
+}
+h1.line span {
+  z-index: 5;
+  background: #fff;
+  position: relative;
+  padding: 0px 50px;
+  display: inline-block;
+  text-align: center;
+}
+h1.line.single-line::before {
+  z-index: 1;
+  content: "";
+  display: block;
+  border-top: solid 3px #0b09a8;
+  width: 90%;
+  left: 5%;
+  height: 1px;
+  position: absolute;
+  top: calc(50% - 1px);
+  z-index: 1;
+}
+h1.line.double-line::before {
+  z-index: 1;
+  content: "";
+  display: block;
+  border-top: solid 2px #0b09a8;
+  border-bottom: solid 2px #0b09a8;
+  width: 90%;
+  left: 5%;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 4px);
+  z-index: 1;
+}
+
+.column-section {
+  margin-bottom: 50px;
+}
+.column-section .column {
+  padding: 25px;
+}
+.column-section .column h3 {
+  color: #0b09a8;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.column-section .column p {
+  padding: 20px 0px;
+  color: #333;
+  text-align: justify;
+}
+
+.input-rounded {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+.input-rounded.primary {
+  background: #0b09a8;
+  color: #fff;
+}
+.input-rounded.primary:hover {
+  background: #040256;
+}
+
+.side-by-side-section {
+  border-top: 5px solid #0b09a8;
+}
+.side-by-side-section .container-fluid .row > div {
+  padding: 0px;
+}
+.side-by-side-section .content {
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.side-by-side-section .content h3 {
+  font-weight: 300;
+  padding: 0 50px;
+}
+.side-by-side-section .content.inverse {
+  background: #0b09a8;
+  color: #fff;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.side-by-side-section .content.inverse hr {
+  width: calc(100% - 100px);
+  border: none;
+  height: 5px;
+  border-top: 5px solid #fff;
+  padding: 0px 50px;
+  box-sizing: border-box;
+}
+.side-by-side-section .content.inverse p {
+  padding: 0px 50px;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 1px;
+}
+@media (max-width: 1199px) {
+  .side-by-side-section .content.inverse p {
+    font-size: 2em;
+  }
+}
+.side-by-side-section .image {
+  height: 500px;
+  background-size: cover !important;
+}
+
+footer.footer {
+  background: #252c41;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer.footer i.fa {
+  color: #fff;
+  font-size: 4em;
+  padding: 25px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  transition: all 0.3s;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+footer.footer i.fa:hover {
+  text-shadow: 2px 2px 0px #0b09a8;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: translateZ(0) scale(1.2);
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="nav-brand pull-left">
+          <i class="fa fa-cubes"></i> ADWEB3
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="title-section">
+  <div class="hero">
+    <div class="hero-title">
+      <div>
+        <span class="animated fadeInUp">Eloquent</span>
+      </div>
+      <div>
+        <span class="animated fadeInUp" style="animation-delay: 0.1s;">Development</span>
+        <span class="animated fadeInUp" style="animation-delay: 0.15s;">Solutions</span>
+      </div>
+      <div>
+        <span class="animated fadeInUp" style="animation-delay: 0.25s;">To</span>
+        <span class="animated fadeInUp" style="animation-delay: 0.3s;">Suit</span>
+        <span class="animated fadeInUp" style="animation-delay: 0.35s;">Your</span>
+        <span class="animated fadeInUp" style="animation-delay: 0.4s;">Needs</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="services-section">
+  <div class="services-title">
+    <h1 class="line double-line animated fadeInUp"><span>How Can We Help?</span></h1>
+  </div>
+  <div class="services-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
+          <div class="section-image">
+            <img src="train.png" />
+          </div>
+          <div class="section-content">
+            <p class="image-tagline">100% Satisfaction</p>
+            <hr />
+            <p class="section-description">
+              Tailor made, custom blockchain and web3 solutions to suit your needs. We provide a wide range of services including Web3, Blockchain, and Smart Contract development. We ensure that you have the product you desire and we provide unlimited revisions to ensure that you have gotten exactly what you wanted.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-4 section-help animated fadeInUp">
+          <div class="section-image">
+            <img src="handshake.png" />
+          </div>
+          <div class="section-content">
+            <p class="image-tagline">Awesome Web Dev</p>
+            <hr />
+            <p class="section-description">
+              We provide web development in many languages and frameworks. We have experience in HTML, CSS, JavaScript, React, Angular, Vue, Node.js, and more. We can provide you with a custom website that is optimized for your needs and we can also provide you with a secure and reliable hosting environment.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 section-help animated fadeInUp">
+          <div class="section-image">
+            <img src="boardroom.png" />
+          </div>
+          <div class="section-content">
+            <p class="image-tagline">Beautiful Interfaces</p>
+            <hr />
+            <p class="section-description">
+              UI/UX, responsive design, and beautiful interfaces are what we do. We have experience in creating beautiful and responsive websites that are optimized for all devices. We can provide you with a custom website that is optimized for your needs and we can also provide you with a secure and reliable hosting environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="testimonial-section">
+  <div class="slider-container">
+    <ul>
+      <li>
+        <div class="testimonial-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="testimonial">ADWEB3 has exceeded all our expectations. We now facilitate 1M users a minute!</p>
+                <hr />
+                <p class="author">Leo S</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="testimonial-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="testimonial">The support from ADWEB3 over the phone is awesome. Thanks #TeamADWEB3 !!</p>
+                <hr />
+                <p class="author">Joe R</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="testimonial-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="testimonial">ADWEB3 is an affordable, professional and approachable web agency. I would highly recommend!</p>
+                <hr />
+                <p class="author">Esther H</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="column-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 column">
+        <h3>Web3</h3>
+        <p>We have years of experience in developing responsive websites. Whatever you need ADWEB3 has you covered.</p>
+        <a href="https://akdavis83.github.io/Portfolio/"><button class="input-rounded primary">Portfolio</button></a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-5 column">
+        <h3>Blockchain</h3>
+        <p>We have years of experience creating and maintaining blockchain networks. We can help you create your own blockchain network or integrate it into your existing infrastructure.</p>
+        <a href="https://github.com/akdavis83/Blockchain-Final"><button class="input-rounded primary">Project</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="side-by-side-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 content">
+        <h3>Custom Web3 Solutions</h3>
+      </div>
+      <div class="hidden-xs col-sm-6 image" style="background: url(Lambo.jpg)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="hidden-xs col-sm-6 image" style="background: url(Lambo1.jpg)">
+      </div>
+      <div class="col-xs-12 col-sm-6 content inverse">
+        <hr />
+        <p>Custom Full Stack Blockchain solutions for any need. We provide a wide range of services including Web3, Blockchain, and Smart Contract development.</p>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 content">
+        <h3>BLOCKCHAIN/WEB3/CRYPTO</h3>
+      </div>
+      <div class="hidden-xs col-sm-6 image" style="background: url(btc.png)">
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="https://www.facebook.com/profile.php?id=100055813034649"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ak___4___7_/"><i class="fa fa-instagram"></i></a>
+        <a href="https://akdavis83.github.io/GITHUB/"><i class="fa fa-github"></i></a>
+        <a href="mailto:akdavis838@gmail.com"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/281684/unslider-min.js'></script>
+<script>
+  $(document).ready(function() {
+  $('.slider-container').unslider({
+    'arrows': false,
+    'nav': false,
+    'animation': 'vertical',
+    'autoplay': true,
+    'delay': 5000
+  });
+});
+</script>
+
+</body>
+</html>
